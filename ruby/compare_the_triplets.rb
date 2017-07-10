@@ -4,16 +4,22 @@ require 'ap'
 def solve(a0, a1, a2, b0, b1, b2)
   a = 0
   b = 0
-  n = 0
-  if a(n) > b(n)
-    a = a + 1
-    n += 1
-  elsif bn > an
-    b = b + 1
-    n += 1
+  if a0 > b0
+    a += 1
+  elsif b0 > a0
+    b += 1
   end
-  return a
-  return b
+  if a1 > b1
+    a += 1
+  elsif b1 > a1
+    b += 1
+  end
+  if a2 > b2
+    a += 1
+  elsif b2 > a2
+    b += 1
+  end
+  return a b
 end
 
 a0, a1, a2 = gets.strip.split(' ')
